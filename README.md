@@ -50,11 +50,61 @@ DB Server
            5. To communicate Java Application  with database we need drivers.
                    Driver: is a software or program on the set of instructions which expose the functionality of another software on hardware
            6. There are 4 types of drivers are available:
-                                          1.Type1 Driver or JDBC-ODBC bridge driver.
+                                          1.Type1 Driver or JDBC-ODBC(Open database Connectivity) bridge driver.
+                                                it not entirely  not written in java language.
                                           2.Type2 Driver or Native API driver
                                           3.Type3 Driver Network protocol driver.
                                           4.Type4 Driver or Thin Driver.
                                           
+                                          #Type1 
+                                          JDBC API                JDBC-ODBC               ODBC Function            Vendor Specific
+                                          |           ==>       bridge Driver   ==>           Call         ==>           Libs         ==> Database
+                                          |
+                                          V 
+                                          Applications 
+                                          
+                                          
+                                          1.  In case of  Type1 Driver ,The JDBC method calls converted into ODBC Function call
+                                          2.  Each and every client machine required to install vendor specific libraries 
+                                          3.  It degrade The Performance due to so many conversion
+                                          4.  Oracle does not support type1 Drivers from JDK1.8 version.
+                                          
+                                          
+                                          #Type2 Drivers
+                                          
+                                          JDBC API                Native APi               Vendor Specific
+                                          /\           ==>          Driver      ==>          Libs              ==> Database
+                                          |
+                                          V 
+                                          Applications 
+                                          
+                                                In this case it upgrades performace then Type1 Driver.
+                                                1.    We must need to install native driver in each and every client machine.
+                                                2.    we must to need to include vendor specific in every client machine.
+                                                
+                                          
+                                          #Type3 Driver
+                                          
+                                          JDBC API                Network protocol              Middletier On Application
+                                          /\           ==>          Driven Driver  ==>                 Server                 ==> Database
+                                          |
+                                          V 
+                                          Applications 
+                                          
+                                              #Type3 Driver on Network Protocol Driver.
+                                                      1.It Required Network support to communicate with database.
+                                                      2.    we need to vendor specific middletier  code to communicate with database.
+                                                      
+                                         #Type4 Driver or Thin Driver.
+                                          
+                                          JDBC API                        Thin 
+                                          /\           ==>               Server                 ==> Database
+                                          |
+                                          V 
+                                          Applications  
+                                          
+                                          In Type4 we don't  need any conversion. dont need any middletier specific code.
+                                          it is purely developed written in java language.
                                           
            
                 
