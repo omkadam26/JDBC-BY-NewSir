@@ -43,10 +43,21 @@ DB Server
       
            1. Jdbc API(java Database Connectivity  Application programming interface) 
                 which provices the way to communicate with one program with another program.
-           2.  The main purpose  of JDBC api is to store the Applications data permanently to the database server
-                (oracle,mysql,postgre,etc.)
-           3.    Data server provides way to organize our data , so that data can be easily and efficiently 
-                access,remove or update.
+           2. The main purpose  of JDBC api is to store the Applications data permanently to the database server
+               (oracle,mysql,postgre,etc.)
+           3. Data server provides way to organize our data , so that data can be easily and efficiently 
+              access,remove or update.
+           5. To communicate Java Application  with database we need drivers.
+                   Driver: is a software or program on the set of instructions which expose the functionality of another software on hardware
+           6. There are 4 types of drivers are available:
+                                          1.Type1 Driver or JDBC-ODBC bridge driver.
+                                          2.Type2 Driver or Native API driver
+                                          3.Type3 Driver Network protocol driver.
+                                          4.Type4 Driver or Thin Driver.
+                                          
+                                          
+           
+                
                 
       
       
